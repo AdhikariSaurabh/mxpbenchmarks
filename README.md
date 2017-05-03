@@ -1,6 +1,4 @@
-/*******************************************************************************************************
-Author : Saurabh Adhikari 
-********************************************************************************************************/
+ 
 1). Mxp Linux set up file mxplinuxsetup.doc tells about configuring the MXP overlay with the Xilinx Zynq 
 
 2). FILTERGRAPHS consist of the performance graphs for the filters CHEBYSHEV, MIBENCH and QSPLINE.
