@@ -1,0 +1,18 @@
+MXP Vectorblox (256 * 256 gray image):
+184.3 usec
+
+
+Intel(R) Core(TM) i3-5005U
+812 us
+
+
+ARM-A9
+10 ms
+
+Neon gcc
+with optimization -O3
+10 ms
+
+
+
+
