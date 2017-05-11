@@ -3,7 +3,7 @@
 
 MXP LINUX SET UP:
 
->> Mxp Linux set up file mxplinuxsetup.doc tells about configuring the MXP overlay with the Xilinx Zynq. 
+Mxp Linux set up file mxplinuxsetup.doc tells about configuring the MXP overlay with the Xilinx Zynq. 
  
 
 PERFORMANCE MEASURES:
@@ -18,11 +18,9 @@ PERFORMANCE MEASURES:
 
 SOURCE CODE:
 
->> Source folder consist of the mxp code for the various benchmarks
+Source folder consist of the mxp code for the various benchmarks
 
 PERFORMANCE GRAPHS:
-
-I).
 
 FILTERGRAPHS:
 
@@ -32,7 +30,6 @@ FILTERGRAPHS:
 
 ![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/filtergraphs/filter_performance_word.png?raw=true "Optional Title")
 
-II).
 
 KERNELGRAPHS:
 ![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/kernelgraphs/kernel_performance_byte.png?raw=true "Optional Title")
@@ -41,7 +38,6 @@ KERNELGRAPHS:
 
 ![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/kernelgraphs/kernel_performance_word.png?raw=true "Optional Title")
 
-III).
 
 POLYTESTGRAPHS:
 
@@ -51,7 +47,6 @@ POLYTESTGRAPHS:
 
 ![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/polytestgraphs/polytest_graph_word.png?raw=true "Optional Title")
 
-IV).
 
 POLYNOMIAL GRAPHS:
 
