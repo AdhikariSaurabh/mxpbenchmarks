@@ -22,7 +22,7 @@ Source folder consist of the mxp code for the various benchmarks
 
 PERFORMANCE GRAPHS:
 
-FILTERGRAPHS:
+FilterGraphs:
 
 ![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/filtergraphs/filter_performance_byte.png?raw=true "Optional Title")
 
@@ -31,7 +31,7 @@ FILTERGRAPHS:
 ![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/filtergraphs/filter_performance_word.png?raw=true "Optional Title")
 
 
-KERNELGRAPHS:
+KernelGraphs:
 ![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/kernelgraphs/kernel_performance_byte.png?raw=true "Optional Title")
 
 ![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/kernelgraphs/kernel_performance_halfword.png?raw=true "Optional Title")
@@ -39,7 +39,7 @@ KERNELGRAPHS:
 ![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/kernelgraphs/kernel_performance_word.png?raw=true "Optional Title")
 
 
-POLYTESTGRAPHS:
+PolytestGraphs:
 
 ![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/polytestgraphs/polytest_graph_byte.png?raw=true "Optional Title")
 
@@ -48,7 +48,7 @@ POLYTESTGRAPHS:
 ![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/polytestgraphs/polytest_graph_word.png?raw=true "Optional Title")
 
 
-POLYNOMIAL GRAPHS:
+PolynomialGraphs:
 
 ![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/polynomial_graphsno_of_samples%20vs%20time%20taken(msec)/cubic_samples.png?raw=true "Optional Title")
 
