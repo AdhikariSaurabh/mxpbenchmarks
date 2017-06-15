@@ -1,0 +1,214 @@
+run sdboot
+
+
+/dissertation/mxp/examples/software/bmark
+*most of the work folder saved here 
+
+
+
+
+https://en.wikipedia.org/wiki/Sparse_matrix-vector_multiplication
+
+spmv part:
+/dissertation/mxp/examples/software/bmark/emulator_st/apps/spmv/src/spmvbench
+
+
+img_processing shell script location:
+/dissertation/mxp/examples/software/bmark
+
+-I../../../../repository/lib/vbxapi/obj/LINUX -I../../../../repository/lib/v
+bxapi -I../../lib/libfixmath -I../../lib/libfixmath/obj/LINUX  -I../../lib/scala
+r -I../../lib/scalar/obj/LINUX -I../../lib/vbxtest -I../../lib/vbxtest/obj/LINUX
+-I../../lib/vbxware -I../../lib/vbxware/obj/LINUX -I../../lib/vbxware++ -I../..
+/lib/vbxware++/obj/LINUX
+
+-L../../../../repository/lib/vbxapi -L../../lib/libfixmath -L../../lib/sc
+alar -L../../lib/vbxtest -L../../lib/vbxware -L../../lib/vbxware++ -lvbxapi -lfi
+xmath -lscalar -lvbxtest -lvbxware -lm -lrt
+
+spmv source code:
+/dissertation/mxp/examples/software/bmark/emulator_st
+
+
+makefile location:
+/dissertation/mxp/examples/software/bmark/img_processing
+/dissertation/mxp/examples/software/bmark/emulator_st/apps/spmv/x86_64
+
+-I../../../../../../../repository/lib/vbxapi/obj/LINUX
+-I../../../../../../../repository/lib/vbxapi
+-I../../../../../lib/libfixmath
+-I../../../../../lib/libfixmath/obj/LINUX  
+-I../../../../../lib/scalar 
+-I../../../../../lib/scalar/obj/LINUX 
+-I../../../../../lib/vbxtest 
+-I../../../../../lib/vbxtest/obj/LINUX
+-I../../../../../lib/vbxware 
+-I../../../../../lib/vbxware/obj/LINUX 
+-I../../../../../lib/vbxware++ 
+-I../../../../../lib/vbxware++/obj/LINUX
+
+
+libraries:
+-L../../../../../../../repository/lib/vbxapi
+-L../../../../../lib/libfixmath 
+-L../../../../../lib/scalar 
+-L../../../../../lib/vbxtest 
+-L../../../../../lib/vbxware 
+-L../../../../../lib/vbxware++ 
+-lvbxapi -lfixmath -lscalar -lvbxtest -lvbxware -lm -lrt
+
+
+********************************************************************************************************************************************
+error:
+
+make: *** No rule to make target `-I../../../../../../../repository/lib/vbxapi', needed by `smvm_benchmark.o'.  
+
+
+
+*********************************************************************************************************************************************
+// Makefile
+#
+# $Id: $
+#
+# Description: Makefile for spmv program
+#
+# $Log: $
+#
+
+TARGET = spmv
+VERSION = 1.0
+LABEL = V$(subst .,_,$(VERSION))
+
+#DEFS += -DVERSION=$(VERSION)
+#DEFS += -DTIMEOFDAY
+#DEFS += -DPOSIX_GETTIMEOFDAY
+DEFS += -DHAVE__COMPLEX
+
+SRC = ../../shared ../src ../src/bebop_util ../src/matrix_generator ../src/spmvb
+ench
+HEADERS = config.h alloc.h cache.h monitor.h ticks.h clocks.h
+MODULES += block_smvm_code smvm_benchmark smvm_timing_results smvm_timing_run sm
+vm_verify_result timing
+MODULES += bcoo_matrix bcsr_matrix create_rand
+MODULES += __complex mt19937ar random_number smvm_malloc smvm_util sort_joint_ar
+rays
+
+HEADERSMXP = -I../../../../../../../repository/lib/vbxapi/obj/LINUX -I../../../.
+./../../../repository/lib/vbxapi -I../../../../../lib/libfixmath -I../../../../.
+./lib/libfixmath/obj/LINUX -I../../../../../lib/scalar -I../../../../../lib/scal
+ar/obj/LINUX../../../../../lib/vbxtest -I../../../../../lib/vbxtest/obj/LINUX -I
+../../../../../lib/vbxware -I../../../../../lib/vbxware/obj/LINUX -I../../../../
+../lib/vbxware++ -I../../../../../lib/vbxware++/obj/LINUX
+
+LIBMXP = -L../../../../../../../repository/lib/vbxapi -L../../../../../lib/libfi
+xmath -L../../../../../lib/scalar -L../../../../../lib/vbxtest -L../../../../../
+lib/vbxware  -L../../../../../lib/vbxware++
+
+# comma separated list of defines
+ifdef D
+  SEP := ,
+  DEFS += $(patsubst %,-D%,$(subst $(SEP), ,$(D)))
+endif
+
+MODULES += __complex mt19937ar random_number smvm_malloc smvm_util sort_joint_ar
+rays
+
+HEADERSMXP = -I../../../../../../../repository/lib/vbxapi/obj/LINUX -I../../../.
+./../../../repository/lib/vbxapi -I../../../../../lib/libfixmath -I../../../../.
+./lib/libfixmath/obj/LINUX -I../../../../../lib/scalar -I../../../../../lib/scal
+ar/obj/LINUX../../../../../lib/vbxtest -I../../../../../lib/vbxtest/obj/LINUX -I
+../../../../../lib/vbxware -I../../../../../lib/vbxware/obj/LINUX -I../../../../
+../lib/vbxware++ -I../../../../../lib/vbxware++/obj/LINUX
+
+LIBMXP = -L../../../../../../../repository/lib/vbxapi -L../../../../../lib/libfi
+xmath -L../../../../../lib/scalar -L../../../../../lib/vbxtest -L../../../../../
+lib/vbxware  -L../../../../../lib/vbxware++
+
+# comma separated list of defines
+ifdef D
+  SEP := ,
+  DEFS += $(patsubst %,-D%,$(subst $(SEP), ,$(D)))
+endif
+
+ifneq (,$(findstring M5,$(DEFS)))
+  M5OP = m5op_x86
+  SRC += ../../m5
+  MODULES += $(M5OP)
+endif
+
+OBJECTS = $(addsuffix .o,$(TARGET) $(MODULES))
+
+VPATH = $(subst ' ',:,$(SRC))
+
+OPT = -O3
+#OPT += -ftree-vectorize -ffast-math
+#MACH = -march=core2
+CPPFLAGS = $(DEFS)
+CPPFLAGS += $(patsubst %,-I%,$(SRC))
+CFLAGS = $(MACH) $(OPT) -Wall
+CXXFLAGS = $(CFLAGS)
+LDFLAGS += -static
+LDLIBS = -lvbxapi -lfixmath -lscalar -lvbxtest -lvbxware  -lm -lrt
+
+
+#VAR = $(if $(findstring CYGWIN,$(shell uname -s)),CYG_TRUE,CYG_FALSE)
+
+.PHONY: all
+all: $(TARGET)
+
+.PHONY: check
+check: $(TARGET)
+        ./$(TARGET) -s18 -v15
+
+.PHONY: clean
+clean:
+        $(RM) $(wildcard *.o) $(TARGET)$(EXE)
+
+.PHONY: vars
+vars:
+        @echo TARGET: $(TARGET)
+        @echo VERSION: $(VERSION)
+        @echo LABEL: $(LABEL)
+        @echo OBJECTS: $(OBJECTS)
+        @echo DEFS: $(DEFS)
+
+$(TARGET): $(OBJECTS)
+        $(LINK.cpp) $^ $(LOADLIBES) $(LDLIBS) $(LIBMXP) -o $@
+
+$(OBJECTS): $(MAKEFILE_LIST) # rebuild if MAKEFILE changes
+# establish module specific dependencies
+# module.o: module.h
+$(TARGET).o: smvm_benchmark.h smvm_timing_results.h $(HEADERS)
+$(M5OP).o: m5op.h m5ops.h
+
+# bebop_util
+__complex.o: __complex.h
+random_number.o: random_number.h smvm_malloc.h smvm_util.h
+smvm_malloc.o: smvm_malloc.h smvm_util.h
+smvm_util.o: smvm_util.h smvm_malloc.h random_number.h
+sort_joint_arrays.o: sort_joint_arrays.h random_number.h smvm_malloc.h smvm_util
+.h
+
+# matrix_generator
+bcoo_matrix.o: bcoo_matrix.h bcsr_matrix.h enumerations.h __complex.h random_num
+ber.h smvm_malloc.h smvm_util.h sort_joint_arrays.h
+bcsr_matrix.o: bcsr_matrix.h enumerations.h __complex.h smvm_malloc.h smvm_util.
+h
+create_rand.o: create_rand.h bcoo_matrix.h bcsr_matrix.h enumerations.h random_n
+umber.h smvm_malloc.h smvm_util.h sort_joint_arrays.h
+
+# spmvbench
+block_smvm_code.o: block_smvm_code.h $(HEADERS)
+smvm_benchmark.o: smvm_benchmark.h smvm_timing_run.h smvm_timing_results.h smvm_
+verify_result.h smvm_util.h smvm_malloc.h create_rand.h bcsr_matrix.h $(HEADERSM
+XP)
+smvm_timing_results.o: smvm_timing_results.h smvm_util.h
+smvm_timing_run.o: smvm_timing_run.h smvm_timing_results.h smvm_verify_result.h
+timing.h smvm_util.h smvm_malloc.h block_smvm_code.h $(HEADERS)
+smvm_verify_result.o: smvm_verify_result.h smvm_malloc.h smvm_util.h
+timing.o: timing.h
+
+
+
+
+
