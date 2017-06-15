@@ -79,12 +79,12 @@ In this project, we used following repositories:
 ## <a name="Speedup Analysis"></a> 4) Speedup Analysis
 **Speedup Analysis with respect to ARM cortex A9 at byte, halfword and word level**
 
-![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/speedupbyte.png?raw=true "Byte(8-bits) Level Speedup")
+![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/speedup_analysis/speedupbyte.png?raw=true "Byte(8-bits) Level Speedup")
 
 
-![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/speeduphalfword.png?raw=true "Halfword(16-bits) Level Speedup")
+![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/speedup_analysis/speeduphalfword.png?raw=true "Halfword(16-bits) Level Speedup")
 
-![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/speedupword.png?raw=true "Word(32-bits) Level Speedup")
+![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/speedup_analysis/speedupword.png?raw=true "Word(32-bits) Level Speedup")
  
 
 
