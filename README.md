@@ -82,7 +82,7 @@ In this project, we used following repositories:
 ![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/speedupbyte.png?raw=true "Byte(8-bits) Level Speedup")
 
 
-![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/speeduphalf.png?raw=true "Halfword(16-bits) Level Speedup")
+![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/speeduphalfword.png?raw=true "Halfword(16-bits) Level Speedup")
 
 ![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/speedupword.png?raw=true "Word(32-bits) Level Speedup")
  
