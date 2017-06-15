@@ -28,10 +28,10 @@ In order to install the xilinux on zedboard with the base xillybus bitstream ple
 ### <a name="repo"></a> 2.2: Repositories 
 In this project, we used following repositories:
 
-* [mxprepo](https://github.com/VectorBlox/mxp.git).  
-* [linuxrepo](https://github.com/VectorBlox/linux-xlnx.git). 
-* [Ubootrepo](https://github.com/VectorBlox/u-boot-xlnx.git). 
-* [devicetreerepo](https://github.com/VectorBlox/device-tree-xlnx.git). 
+* [mxprepo](https://github.com/VectorBlox/mxp.git) 
+* [linuxrepo](https://github.com/VectorBlox/linux-xlnx.git)
+* [Ubootrepo](https://github.com/VectorBlox/u-boot-xlnx.git)
+* [devicetreerepo](https://github.com/VectorBlox/device-tree-xlnx.git)
 
 
 ## <a name="performanceanalysis"></a> 3) Throughput Analysis
@@ -77,9 +77,14 @@ In this project, we used following repositories:
 ![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/polynomial_graphsno_of_samples%20vs%20time%20taken(msec)/quadratic_samples.png?raw=true "Optional Title")
 
 ## <a name="Speedup Analysis"></a> 4) Speedup Analysis
+**Speedup Analysis with respect to ARM cortex A9 at byte, halfword and word level**
+
+![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/speedupbyte.pdf?raw=true "Byte(8-bits) Level Speedup")
 
 
+![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/speeduphalf.pdf?raw=true "Halfword(16-bits) Level Speedup")
 
+![Alt text](https://github.com/AdhikariSaurabh/mxpbenchmarks/blob/master/speedupword.pdf?raw=true "Word(32-bits) Level Speedup")
  
 
 
