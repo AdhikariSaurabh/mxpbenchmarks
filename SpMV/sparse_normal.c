@@ -1,3 +1,8 @@
+// SpMV multiplicaton
+// y = Ax
+// A is the sparse matrix 
+// x is the vector
+// y is the output supposed to be dense matrix
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h> 
