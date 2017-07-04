@@ -1,4 +1,4 @@
-# FPGA VIRTUALIZATION USING THE MXP OVERLAY ARCHITECTURE and PERFORMANCE ANALYSIS
+# EVALUATING THE PERFORMANCE OF COMPUTING PLATFORMS USING A SET OF COMPUTE KERNELS
 This project describes the implementation of the standard benchmarks on the FPGA overlay for the performance analysis and comparing the performance measure such as the throughput (Gops/sec) and the speedup against the other embedded hard processors such as ARM coterx A9, SIMD NEON and INTEL I3. MXP VectorBlox is the FPGA overlay that we have used in our work. For detailed information on the power of the MXP soft-vector processor checkout   [MXP](http://vectorblox.com/).  
 
 ## Table of Contents
