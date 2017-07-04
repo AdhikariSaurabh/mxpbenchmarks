@@ -1,8 +1,8 @@
 
 CC = gcc
  
-MXP_IDIR = -I ../vbxapi/
-LDIR     = -L ../vbxapi/
+MXP_IDIR = -I ../../vbxapi/
+LDIR     = -L ../../vbxapi/
 
 LIBS     = -lvbxapi -lm -lrt 
 
